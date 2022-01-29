@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HttpUtils</string>
+
+    <string name="btn_get_sample">GET SAMPLE</string>
+    <string name="btn_upload_file_sample">UPLOAD FILE</string>
+    <string name="btn_post_string_sample">POST STRING</string>
+    <string name="btn_head_sample">HEAD</string>
+</resources>

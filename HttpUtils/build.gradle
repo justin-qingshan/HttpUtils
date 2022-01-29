@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+def version = '0.0.1'
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 26
+        targetSdk 32
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+task clearJay(type: Delete) {
+    delete "build/outputs/${project.name}*.aar"
+}
+
+task makeJar(type: Copy) {
+    from('build/outputs/aar/')
+    into('build/outputs/')
+    include("${project.name}-release.aar")
+    rename ("${project.name}-release.aar", "${project.name}-${version}.aar")
+}
+
+makeJar.dependsOn(clearJay, build)
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+}
