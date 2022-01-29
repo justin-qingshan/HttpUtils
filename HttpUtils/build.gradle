@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
 
 def version = '0.0.1'
@@ -31,18 +32,18 @@ android {
     }
 }
 
-task clearJay(type: Delete) {
-    delete "build/outputs/${project.name}*.aar"
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = "com.justin.qingshan"
+                artifactId = "HttpUtils"
+                version = rootProject.ext.ver
+            }
+        }
+    }
 }
-
-task makeJar(type: Copy) {
-    from('build/outputs/aar/')
-    into('build/outputs/')
-    include("${project.name}-release.aar")
-    rename ("${project.name}-release.aar", "${project.name}-${version}.aar")
-}
-
-makeJar.dependsOn(clearJay, build)
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
