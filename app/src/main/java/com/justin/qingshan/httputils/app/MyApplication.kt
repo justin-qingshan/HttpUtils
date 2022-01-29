@@ -1,6 +1,7 @@
-package com.justin.qingshan.httputils
+package com.justin.qingshan.httputils.app
 
 import android.app.Application
+import com.justin.qingshan.httputils.OkHttpUtils
 import com.justin.qingshan.httputils.log.LoggerInterceptor
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit

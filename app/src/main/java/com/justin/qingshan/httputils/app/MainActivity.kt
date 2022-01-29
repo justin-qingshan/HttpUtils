@@ -1,4 +1,4 @@
-package com.justin.qingshan.httputils
+package com.justin.qingshan.httputils.app
 
 import android.app.Activity
 import android.content.Intent
@@ -8,7 +8,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.lifecycle.ViewModelProvider
-import com.justin.qingshan.httputils.viewmodel.SampleViewModel
+import com.justin.qingshan.httputils.R
+import com.justin.qingshan.httputils.app.viewmodel.SampleViewModel
 
 class MainActivity : AppCompatActivity() {
 

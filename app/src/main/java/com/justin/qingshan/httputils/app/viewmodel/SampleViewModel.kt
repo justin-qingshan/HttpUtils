@@ -1,4 +1,4 @@
-package com.justin.qingshan.httputils.viewmodel
+package com.justin.qingshan.httputils.app.viewmodel
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -10,9 +10,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.justin.qingshan.httputils.*
 import com.justin.qingshan.httputils.callback.*
-import com.justin.qingshan.httputils.utils.runTask
-import com.justin.qingshan.httputils.utils.toEntity
-import com.justin.qingshan.httputils.utils.toJsonString
+import com.justin.qingshan.httputils.app.utils.runTask
+import com.justin.qingshan.httputils.app.utils.toEntity
+import com.justin.qingshan.httputils.app.utils.toJsonString
 import com.justin.qingshan.httputils.utils.triple
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody

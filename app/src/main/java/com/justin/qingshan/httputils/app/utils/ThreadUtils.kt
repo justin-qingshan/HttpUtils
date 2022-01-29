@@ -1,4 +1,4 @@
-package com.justin.qingshan.httputils.utils
+package com.justin.qingshan.httputils.app.utils
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder
 import java.util.concurrent.LinkedBlockingQueue
