@@ -4,6 +4,9 @@ A kotlin implementation of [okhttp-utils](https://github.com/hongyangAndroid/okh
 
 Simple tool to invoke [OkHttp](https://github.com/square/okhttp) easily to launch http request in Android.
 
+[![](https://jitpack.io/v/justin-qingshan/HttpUtils.svg)](https://jitpack.io/#justin-qingshan/HttpUtils)
+
+
 # Usage
 
 __Step1. Add Jetpack repository__
