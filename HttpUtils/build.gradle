@@ -4,8 +4,6 @@ plugins {
     id 'maven-publish'
 }
 
-def version = '0.0.1'
-
 android {
     compileSdk 32
 
