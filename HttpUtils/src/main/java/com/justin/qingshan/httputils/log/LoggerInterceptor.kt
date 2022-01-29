@@ -43,7 +43,7 @@ class LoggerInterceptor(
             }
 
             if (showResponse) {
-                val body = clone.body?.let {
+                clone.body?.let {
                     it.contentType()?.let { _mediaType ->
                         Log.i(tag, "response body's content type: $_mediaType")
                         if (_mediaType.isText()) {

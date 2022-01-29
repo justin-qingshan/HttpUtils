@@ -21,7 +21,7 @@ __Step2. Add the dependency__
 
 ```groovy
 implementation 'com.squareup.okhttp3:okhttp:4.9.0'
-implementation 'com.justin-qingshan:httputils:0.0.1'
+implementation 'com.github.justin-qingshan:HttpUtils:0.0.1'
 ```
 
 # Config OkHttpClient
