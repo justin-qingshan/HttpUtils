@@ -22,8 +22,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
         jvmTarget = '1.8'
@@ -35,12 +35,18 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
+                artifact androidSourcesJar
                 groupId = "com.justin.qingshan"
                 artifactId = "HttpUtils"
                 version = rootProject.ext.ver
             }
         }
     }
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier 'sources'
+    from android.sourceSets.main.java.srcDirs
 }
 
 dependencies {
